@@ -1,0 +1,19 @@
+Configuration ConFig
+{
+    Import-DscResource -ModuleName PSDesiredStateConfiguration
+ 
+    
+# Create the "HelloWorld.txt" file with specific content
+        WindowsFeature Cong
+        {
+            Ensure = "Present"
+            Name = "Getting started with DSC!"
+        }
+ 
+# Install the IIS web server feature
+        WindowsFeature MyFeatureInstance
+        {
+            Ensure = "Present"
+            Name = "Web-Server"  # Name of the IIS feature
+        }
+}
